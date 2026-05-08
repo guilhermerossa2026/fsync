@@ -38,7 +38,7 @@ nav ul {
 nav a {
   color: var(--preto);
   text-decoration: none;
-  font-size: 14px;
+  font-size: 20px;
   font-family: "Barlow Condensed", sans-serif;
   text-transform: uppercase;
 }
@@ -135,8 +135,8 @@ nav a {
 .texto-vermelho {
   position: absolute;
 
-  top: -35px;
-  left: 10px;
+  top: -55px;
+  left: 60px;
 
   font-size: 120px;
   font-family: "Birthstone", cursive;
@@ -151,7 +151,7 @@ nav a {
 
   pointer-events: none;
 
-  mix-blend-mode: multiply;
+  /* mix-blend-mode: multiply; */
 }
 
 #hero h1 {
