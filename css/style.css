@@ -500,3 +500,69 @@ footer {
   opacity: 1;
   transform: translateY(0);
 }
+
+.logos-container {
+  overflow: hidden;
+  padding: 60px 0;
+  background: var(--branco);
+  white-space: nowrap;
+  position: relative;
+}
+
+.scroll-infinite {
+  display: flex;
+  width: max-content;
+}
+
+.logos-slide {
+  display: flex;
+  justify-content: space-around;
+  min-width: 100%;
+  align-items: center;
+  animation: slide 30s linear infinite;
+}
+
+.logos-slide img {
+  height: 60px;
+  margin: 0 40px;
+  filter: grayscale(100%);
+  opacity: 0.6;
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.logos-slide img:hover {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+.scroll-infinite:has(img:hover) .logos-slide {
+  animation-play-state: paused;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.hero-banner {
+  width: 100%;
+  height: 200px; /* Altura que a imagem vai ocupar */
+  background-image: url("../img/iamgem-header-teste.png");
+  background-size: cover;
+  background-position: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  margin-bottom: 50px;
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    height: 300px;
+    background-attachment: scroll;
+  }
+}
